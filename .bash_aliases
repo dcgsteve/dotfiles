@@ -8,6 +8,7 @@ alias apprise='docker run caronc/apprise:latest apprise "$@"'
 alias t='terraform'
 alias k='kubectl'
 alias kn='kubectl config set-context --current --namespace="$@"'
+alias v='vault'
 
 # Functions
 dbash() { docker exec -it $1 bash; }
