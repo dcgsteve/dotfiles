@@ -7,6 +7,7 @@ alias ctop='docker run --rm -ti --name=ctop --volume /var/run/docker.sock:/var/r
 alias apprise='docker run caronc/apprise:latest apprise "$@"'
 alias t='terraform'
 alias k='kubectl'
+alias kn='kubectl config set-context --current --namespace="$@"'
 
 # Functions
 dbash() { docker exec -it $1 bash; }

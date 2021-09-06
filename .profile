@@ -26,12 +26,14 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin/GoLand/bin" ] ; then
-    PATH="$HOME/.local/bin/GoLand/bin:$PATH"
+# GoLand
+if [ -d "$HOME/.local/bin/Goland/bin" ] ; then
+    PATH="$HOME/.local/bin/Goland/bin:$PATH"
 fi
 
 # Go
-if [ -d "/usr/local/go/bin" ] ; then
-    PATH="/usr/local/go/bin:$PATH"
+if [ -d "$HOME/.local/bin/go" ] ; then
+    export GOROOT=$HOME/.local/bin/go
+    export GOPATH=$HOME/src
+    PATH="$HOME/.local/bin/go/bin:$PATH"
 fi
