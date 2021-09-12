@@ -26,6 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# IntelliJ
+if [ -d "$HOME/.local/bin/idea/bin" ] ; then
+    PATH="$HOME/.local/bin/idea/bin:$PATH"
+fi
+
 # GoLand
 if [ -d "$HOME/.local/bin/Goland/bin" ] ; then
     PATH="$HOME/.local/bin/Goland/bin:$PATH"
@@ -34,6 +39,6 @@ fi
 # Go
 if [ -d "$HOME/.local/bin/go" ] ; then
     export GOROOT=$HOME/.local/bin/go
-    export GOPATH=$HOME/src
+    export GOPATH=$HOME
     PATH="$HOME/.local/bin/go/bin:$PATH"
 fi
